@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+@font-face {
+    font-family: 'Cafe24Syongsyong';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Syongsyong.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+div{
+    margin-left:100px;
+    margin-right:100px;
+}
+
+    h1 {font-family: 'Black Han Sans', sans-serif;}
+    h3{font-family: 'Cafe24Syongsyong'}
+      
+        

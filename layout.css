@@ -1,0 +1,171 @@
+
+
+  
+  
+  /*프로필 파도타기*/
+
+  .profile-dropdown {
+    flex: 0;
+    border: 1px solid #c9d4da;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    position: relative;
+    top: 180px;
+  }
+
+  .dropdown-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 4.5px solid transparent;
+    border-right: 4.5px solid transparent;
+    border-top: 5px solid #838383;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .profile-dropdown:hover > .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content > a {
+    display: block;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    width: 100%
+    padding: 6px;
+    color: black;
+    text-decoration: none;
+  }
+
+  .dropdown-content > a:hover {
+    background-color: #f1f1f1;
+  }
+
+  /* 업데이트 */
+.update {
+    font-size: 26xp;
+    color: #ee1c85;
+
+  }
+
+  .main-update1{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .update1{
+    flex: 0.5;
+    font-size: 14px;
+    
+  }
+  
+  .gallery {
+    font-size: 11px;
+    color: white;
+    background-color: red;
+    border-radius: 2px;
+    text-align: center;
+    padding: 1px;
+  }
+  
+  .board {
+    font-size: 11px;
+    color: white;
+    background-color: blue;
+    border-radius: 2px;
+    text-align: center;
+    padding: 1px;
+  }
+  
+  .main-update2 {
+    flex:1;
+    position: absolute;
+    right: 0px;
+    width: 400px;
+    top: 130px;
+    padding: 10px;
+  }
+  
+  .update2 {
+    display: flex;
+    text-decoration: underline 1px dashed grey;
+    margin: 3px 0;
+    
+  }
+  
+  .view {
+    flex: 1;
+  }
+  
+  .view-num {
+    font-size: 14px;
+    color: cornflowerblue
+  }
+
+    /*미니룸*/
+  
+  .mini1 {
+    flex: 0.1;
+
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .mini_move {
+    position: relative;
+    left: 60px;
+    display: block;
+
+    width: 40%;
+  }
+  .mini_move > img {
+    width: 180%;
+    height: 180%;
+  }
+
+  /*메뉴*/
+  .row4 {
+    position: absolute;
+    top: 100px;
+  }
+  .row4-category-box {
+    flex: 0.2;
+  }
+
+  .row4-menu {
+    flex: 0;
+    background-color: #df91bc;
+    border: 1px solid #f1cce6;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 4px 4px 4px 9px;
+   
+  }
+
+  .row4-menu:hover {
+    background-color: #b363a2;
+    color: white;
+  }
+
+  .row4-menu > a {
+    color: white;
+    width: 100%;
+    padding : 3px;
+    text-decoration: none;
+  }

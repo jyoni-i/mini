@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>2021 MINI HOMEPAGE</title>
+        <link rel="stylesheet" href="./static/style.css" />
+        <link rel="stylesheet" href="./static/font.css" />
+        <link rel="stylesheet" href="./static/layout.css" />
+        <link rel="stylesheet" href="./static/date.css" />
+        <script src="https://kit.fontawesome.com/e1d1043e15.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+      <div class="bookcover">
+      <div class="bookdot">
+          <div class="page">
+              <div class="column1">
+                <div class="row1">
+                    <div class="text">TODAY <span style="color: orangered;">1</span> | TOTAL 784</div>
+                </div>
+                <div class="row2">
+                    <div class="profile1">
+                    <img src="../ex_img/nanari.jpg" alt="">
+                </div>
+                  <br>
+                <div class="profile2">
+                  <p>"나나오빠와 나리공주"</p>
+                </div>
+                
+                <div class="profile-dropdown">
+                  <div class="dropdown-button">
+                    <div class="dropdown-title">파도타기</div>
+                    <div class="triangle-down"></div>
+                  </div>
+                  <div class="dropdown-content">
+                    <a href="#" target="_blank">파도를 타야하는데</a>
+                    <a href="#" target="_blank">서핑할줄 모르네 데헿</a>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="column2">
+                  <div class="row1">
+                      <div class="text2">
+                          <span style="color: #ee1c85;" >코리쨩, 햄나나, 햄나리</span>
+                      </div> 
+                      <div class="content-title-url">https://url주소/나중에입력</div>                 
+                  </div> 
+                  <div class="row3">
+                    <div class="date-box">
+                      <div class="today-1">07.19<br />MON</div>
+                      <div class="date-list">
+                        <div class="date">1</div>
+                        <div class="date">2</div>
+                        <div class="date"><span class="color-blue">3</span></div>
+                        <div class="date"><span class="color-red">4</span></div>
+                        <div class="date">5</div>
+                        <div class="date">6</div>
+                        <div class="date">7</div>
+                        <div class="date">8</div>
+                        <div class="date">9</div>
+                        <div class="date"><span class="color-blue">10</span></div>
+                        <div class="date"><span class="color-red">11</span></div>
+                        <div class="date">12</div>
+                        <div class="date">13</div>
+                        <div class="date">14</div>
+                        <div class="date">15</div>
+                        <div class="date">16</div>
+                        <div class="date"><span class="color-blue">17</span></div>
+                        <div class="date"><span class="color-red">18</span></div>
+                        <div class="date">19</div>
+                        <div class="date">20</div>
+                        <div class="date">21</div>
+                        <div class="date">22</div>
+                        <div class="date">23</div>
+                        <div class="date"><span class="color-blue">24</span></div>
+                        <div class="date"><span class="color-red">25</span></div>
+                        <div class="date">26</div>
+                        <div class="date">27</div>
+                        <div class="date">28</div>
+                        <div class="date">29</div>
+                        <div class="date">30</div>
+                        <div class="date"><span class="color-blue">31</span></div>                        
+                      </div>
+                    </div>
+                    <div class="scroll-box">
+                      <div class="diary-box">
+                        <div class="diary-date">2021.07.19</div>
+                        <div class="diary-text">
+                             하늘이 무지막지하게 흐리다<br>
+                             방금 우르르쾅쾅했다<br>
+                             그리고 굵은 빗방울이 떨어진다
+                        </div>
+                      </div>
+                      <div class="diary-box">
+                        <div class="diary-date">2021.07.19</div>
+                        <div class="diary-text">
+                          이제 여름 시작인데 너무 덥다<br>
+                          더워서 공부하는데 집중도 잘 안된다 ... <br>
+                          올 여름은 그냥 찜쪄지겠다ㅠㅠ
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="button-box" onclick="getTextFile()">
+                    <button class="diary-button">
+                      <i class="fas fa-lock"></i> 나의 비밀일기 보기
+                    </button>
+                  </div>
+                  <div class="diary-box" id="secret-box">
+                    <div class="diary-date">나의 비밀 일기</div>
+                    <div class="diary-text" id="secret-diary"></div>
+                  </div>
+              </div>   
+              <div class="column3">
+                <div class="row4">
+                  <div class="row4-category-box"></div>
+                  <div class="row4-menu"><a href="home.html">홈</a></div>
+                  <div class="row4-menu"><a href="date.html">다이어리</a></div>
+                  <div class="row4-menu"><a href="photo.html">사진첩</a></div>
+                  <div class="row4-menu"><a href="./guestbook.html">방명록</a></div>                     
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+  </div>
+  <script>
+    function getTextFile() {
+      var input = document.createElement("input");
+      input.type = "file";
+      input.accept = "text/plain";
+      input.onchange = function (event) {
+        processFile(event.target.files[0]);
+      };
+      input.click();
+    }
+
+    function processFile(file) {
+      var reader = new FileReader();
+      reader.readAsText(file, "utf-8");
+
+      reader.onload = function () {
+        document.getElementById("secret-diary").innerText = reader.result;
+        document.getElementById("secret-box").style.display = "block";
+      };
+    }
+  </script>
+</body>
+</html>
+
+
